@@ -72,6 +72,24 @@ export default function TransactionForm({
           onChange={(e) => setForm({ ...form, description: e.target.value })}
           required
         />
+        {/* Category selection buttons */}
+        <div className="flex flex-wrap gap-2 justify-center">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              type="button"
+              className={`px-3 py-1 rounded-full border transition font-medium text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-400
+                ${
+                  form.category === cat
+                    ? "bg-purple-600 text-white border-purple-600"
+                    : "bg-white/70 text-purple-700 border-purple-300 hover:bg-purple-100"
+                }`}
+              onClick={() => setForm({ ...form, category: cat })}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
         <Button onClick={handleSubmit} disabled={loading} className="w-full">
           {loading ? "Saving..." : "Save"}
         </Button>
