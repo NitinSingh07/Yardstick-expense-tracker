@@ -72,19 +72,6 @@ export default function TransactionForm({
           onChange={(e) => setForm({ ...form, description: e.target.value })}
           required
         />
-        <Select
-          value={form.category}
-          onValueChange={(value) => setForm({ ...form, category: value })}
-        >
-          <SelectTrigger className="w-full" />
-          <SelectContent>
-            {categories.map((c) => (
-              <SelectItem key={c} value={c}>
-                {c}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
         <Button onClick={handleSubmit} disabled={loading} className="w-full">
           {loading ? "Saving..." : "Save"}
         </Button>

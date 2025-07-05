@@ -83,7 +83,7 @@ export default function Dashboard() {
       <main className="max-w-6xl mx-auto px-4 space-y-10">
         {/* Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 -mt-16 mb-8">
-          <Card className="bg-white/80 shadow-xl border-0 backdrop-blur-md hover:scale-[1.03] transition-transform duration-200">
+          <Card className="card-glass card-accent-purple hover:scale-[1.03] transition-transform duration-200">
             <CardHeader className="flex flex-row items-center gap-3 pb-2">
               <div className="p-2 rounded-full bg-gradient-to-tr from-purple-400 to-blue-400 text-white shadow-lg">
                 <TrendingUp className="w-6 h-6" />
@@ -98,7 +98,7 @@ export default function Dashboard() {
               </div>
             </CardContent>
           </Card>
-          <Card className="bg-white/80 shadow-xl border-0 backdrop-blur-md hover:scale-[1.03] transition-transform duration-200">
+          <Card className="card-glass card-accent-pink hover:scale-[1.03] transition-transform duration-200">
             <CardHeader className="flex flex-row items-center gap-3 pb-2">
               <div className="p-2 rounded-full bg-gradient-to-tr from-pink-400 to-yellow-400 text-white shadow-lg">
                 <PieChart className="w-6 h-6" />
@@ -116,7 +116,7 @@ export default function Dashboard() {
               </div>
             </CardContent>
           </Card>
-          <Card className="bg-white/80 shadow-xl border-0 backdrop-blur-md hover:scale-[1.03] transition-transform duration-200">
+          <Card className="card-glass card-accent-blue hover:scale-[1.03] transition-transform duration-200">
             <CardHeader className="flex flex-row items-center gap-3 pb-2">
               <div className="p-2 rounded-full bg-gradient-to-tr from-blue-400 to-green-400 text-white shadow-lg">
                 <Clock className="w-6 h-6" />
@@ -153,7 +153,7 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Left Sidebar: Form + Recent Transactions */}
           <div className="space-y-8 lg:sticky lg:top-24">
-            <Card className="bg-white/90 shadow-lg border-0">
+            <Card className="card-glass card-accent-purple">
               <CardHeader>
                 <CardTitle className="text-purple-700">
                   Add / Edit Transaction
@@ -173,7 +173,7 @@ export default function Dashboard() {
                 />
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-blue-100 to-purple-100 shadow border-0">
+            <Card className="card-glass card-accent-cyan">
               <CardHeader>
                 <CardTitle className="text-blue-700">
                   Recent Transactions
@@ -206,7 +206,7 @@ export default function Dashboard() {
           {/* Main Area: Charts + Full Transaction List */}
           <div className="lg:col-span-2 space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="bg-gradient-to-br from-purple-100 to-blue-100 shadow-lg border-0">
+              <Card className="chart-card">
                 <CardHeader>
                   <CardTitle className="text-purple-700">
                     Monthly Expenses
@@ -216,7 +216,7 @@ export default function Dashboard() {
                   <MonthlyExpensesChart data={monthly} />
                 </CardContent>
               </Card>
-              <Card className="bg-gradient-to-br from-pink-100 to-yellow-100 shadow-lg border-0">
+              <Card className="chart-card">
                 <CardHeader>
                   <CardTitle className="text-pink-600">
                     Category Breakdown
@@ -227,7 +227,7 @@ export default function Dashboard() {
                 </CardContent>
               </Card>
             </div>
-            <Card className="bg-white/90 rounded-2xl shadow-lg border-0 p-2">
+            <Card className="card-glass card-accent-purple p-2">
               <CardHeader>
                 <CardTitle className="text-purple-700">
                   All Transactions
